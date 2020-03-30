@@ -1,0 +1,52 @@
+<html> 
+<head> 
+<script> 
+	function calculate() {
+		var n1a1 = parseFloat(document.getElementById('n1a1').value);
+		var n1a2 = parseFloat(document.getElementById('n1a2').value);
+		var n1a3 = parseFloat(document.getElementById('n1a3').value);
+		var n2a1 = parseFloat(document.getElementById('n2a1').value);
+  
+		const N1 = calculateN1(n1a1, n1a2, n1a3);
+		const avgFinalNote = (N1 * 0.4) + (n2a1 * 0.6);
+		alert("Nota final: " + avgFinalNote.toFixed(2)); 
+}
+
+function calculateN1(a1, a2, a3) {
+    return (a1 + a2 + a3) / 3;
+}
+</script> 
+</head> 
+<body> 
+	<br/>
+	Informe N1 A1:
+	<br/>
+	<input type="text" id="n1a1" /> 
+	<br/>
+	<br/>
+
+	<br/>
+	Informe N1 A2:
+	<br/>
+	<input type="text" id="n1a2" /> 
+	<br/>
+	<br/>
+
+	<br/>
+	Informe N1 A3:
+	<br/>
+	<input type="text" id="n1a3" /> 
+	<br/>
+	<br/>
+
+	<br/>
+	Informe N2 A1:
+	<br/>
+	<input type="text" id="n2a1" /> 
+	<br/>
+	<br/>
+
+	<input type="button" value="Calcular Nota" onclick="calculate()" />
+</body>
+
+</html>
